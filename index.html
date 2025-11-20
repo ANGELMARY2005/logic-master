@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Paradox Logic game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Puzzle Paradox</h1>
+            <div class="game-info">
+                <div class="level-info">Level: <span id="current-level">1</span>/10</div>
+                <div class="hp-info">HP: <span id="hp-count">150</span></div>
+                <div class="score-info">Score: <span id="score">0</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div id="welcome-screen" class="screen">
+                <h2>Welcome to Puzzle Paradox!</h2>
+                <p>Solve 100 logical puzzles across 10 challenging levels.</p>
+                <p>Each level gives you 150 HP. Use hints wisely and try to solve puzzles without revealing answers!</p>
+                <button id="start-game">Start Game</button>
+            </div>
+
+            <div id="game-screen" class="screen hidden">
+                <div class="question-container">
+                    <h2 id="question-text">Question will appear here</h2>
+                    <div class="question-progress">Question <span id="current-question">1</span>/10</div>
+                    <div class="answer-blanks" id="answer-blanks"></div>
+                </div>
+
+                <div class="answer-container">
+                    <input type="text" id="answer-input" placeholder="Or type your answer here..."
+                        style="display: none;">
+                    <button id="submit-answer" style="display: none;">Submit</button>
+                </div>
+
+
+                <div class="message-container" id="message-container"></div>
+
+                <div class="hint-container">
+                    <button id="hint1-btn" class="hint-btn">Hint 1</button>
+                    <button id="hint2-btn" class="hint-btn">Hint 2</button>
+                    <button id="show-answer-btn" class="hint-btn" disabled>Show Answer</button>
+                    <div id="hint-display"></div>
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-question">Previous</button>
+                    <button id="next-question">Next</button>
+                </div>
+            </div>
+
+            <div id="level-complete" class="screen hidden">
+                <h2>Level Complete!</h2>
+                <p>You scored <span id="level-score">0</span> points</p>
+                <p>HP Remaining: <span id="level-hp">150</span></p>
+                <button id="next-level-btn">Next Level</button>
+            </div>
+
+            <div id="game-complete" class="screen hidden">
+                <h2>Congratulations!</h2>
+                <p>You've completed all 10 levels!</p>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="play-again">Play Again</button>
+            </div>
+
+            <div id="game-over" class="screen hidden">
+                <h2>Game Over</h2>
+                <p>You've run out of HP!</p>
+                <button id="restart-game">Restart Game</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Logic Master. All rights reserved.</p>
+            <p class="angel-mary">Made with ❤️ by Angel Mary</p>
+        </div>
+    </footer>
+</body>
+
+</html>
